@@ -61,6 +61,7 @@ func Execute() {
 	}
 }
 
+// This is the main handler
 func tmcrawlCmdHandler(cmd *cobra.Command, args []string) error {
 	logLvl, err := zerolog.ParseLevel(logLevel)
 	if err != nil {

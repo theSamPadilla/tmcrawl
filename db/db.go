@@ -28,7 +28,7 @@ type (
 // It will create all the necessary Badger DB buckets if they don't already exist.
 func NewBadgerDB(dataDir, dbName string) (DB, error) {
 	dbPath := filepath.Join(dataDir, dbName)
-	db, err := badger.Open(badger.DefaultOptions(dbPath).WithEventLogging(false))
+	db, err := badger.Open(badger.DefaultOptions(dbPath))
 	if err != nil {
 		return nil, err
 	}

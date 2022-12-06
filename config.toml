@@ -1,11 +1,12 @@
 # data_dir defines the directory of the embedded DB.
-data_dir = ""
+data_dir = "/home/samuelpadilla/tmcrawl/db"
 # listen_addr defines the JSON API listening address in the form of host:port.
 listen_addr = ""
 # seeds defines a list of initial seed nodes.
 seeds = []
+
 # ipstack_key defines the ipstack API access key required for geolocation queries.
-ipstack_key = ""
+ipstack_key = "69_fu_420"
 # reseed_size defines the size of the reseed list for which to reseed the node
 # pool after its been exhausted. It is populated by the crawling process.
 reseed_size = 100

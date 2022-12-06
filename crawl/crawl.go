@@ -1,6 +1,7 @@
 package crawl
 
 import (
+	"context"
 	"fmt"
 	"time"
 
@@ -46,6 +47,7 @@ func (c *Crawler) Crawl() {
 
 	go c.RecheckNodes()
 
+	//Iterates over every node in the pool indefentely, crawls it and delets it.
 	for {
 		nodeRPCAddr, ok := c.pool.RandomNode()
 		for ok {
@@ -61,6 +63,7 @@ func (c *Crawler) Crawl() {
 	}
 }
 
+//!MAIN CRAWLING FUNCTIONALITY
 // CrawlNode performs the main crawling functionality for a Tendermint node. It
 // accepts a node RPC address and attempts to ping that node's P2P address by
 // using the RPC address and the default P2P port of 26656. If the P2P address
@@ -70,7 +73,9 @@ func (c *Crawler) Crawl() {
 // is added.
 func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 	host := parseHostname(nodeRPCAddr)
-	nodeP2PAddr := fmt.Sprintf("%s:%s", host, defaultP2PPort)
+	nodeP2PAddr := fmt.Sprintf("%s:%s", host, defaultP2PPort) //p2p is 26656 (defaultP2PPort)
+
+	fmt.Printf("\n\n----------Crawling new node at %s----------------\n", nodeP2PAddr)
 
 	node := Node{
 		Address:  host,
@@ -81,7 +86,7 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 
 	log.Debug().Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Msg("pinging node...")
 	if ok := PingAddress(nodeP2PAddr, 5); !ok {
-		log.Info().Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Msg("failed to ping node; deleting...")
+		log.Info().Msg("Failed to ping node, deleting...")
 
 		if err := c.DeleteNodeIfExist(node); err != nil {
 			log.Info().Err(err).Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Msg("failed to delete node")
@@ -97,11 +102,19 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 		node.Location = loc
 	}
 
-	client := newRPCClient(nodeRPCAddr)
+	nodeTendermintAddr := fmt.Sprintf("%s:%s", host, "26657")
+	fmt.Println("\nRPC address:", nodeRPCAddr)
+	fmt.Println("P2P address:", nodeP2PAddr)
+	fmt.Println("Tendermint address:", nodeTendermintAddr)
+	fmt.Println("")
 
-	status, err := client.Status()
+	// Create context and new rpc client
+	client := newRPCClient(nodeTendermintAddr)
+	ctx := context.Background()
+
+	status, err := client.Status(ctx)
 	if err != nil {
-		log.Info().Err(err).Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Msg("failed to get node status")
+		log.Info().Err(err).Msg("Failed to get node status.")
 	} else {
 		node.Moniker = status.NodeInfo.Moniker
 		node.ID = string(status.NodeInfo.ID())
@@ -109,13 +122,18 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 		node.Version = status.NodeInfo.Version
 		node.TxIndex = status.NodeInfo.Other.TxIndex
 
-		netInfo, err := client.NetInfo()
+		fmt.Printf("\nGot node info:\n\tMonkier: %s\n\tID: %s\n\tNetwork: %s\n\tTendermint Version: %s\n\tTx Index: %s", node.Moniker, node.ID, node.Network, node.Version, node.TxIndex)
+
+		netInfo, err := client.NetInfo(ctx)
 		if err != nil {
 			log.Info().Err(err).Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Msg("failed to get node net info")
 			return
 		}
 
+		fmt.Printf("\nGot NET INFO for %d Node Peers", netInfo.NPeers)
+
 		for _, p := range netInfo.Peers {
+			fmt.Println("\n\tParsing peers")
 			peerRPCPort := parsePort(p.NodeInfo.Other.RPCAddress)
 			peerRPCAddress := fmt.Sprintf("http://%s:%s", p.RemoteIP, peerRPCPort)
 			peer := Node{
@@ -126,9 +144,12 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 			if !c.db.Has(peer.Key()) {
 				log.Debug().Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Str("peer_rpc_address", peerRPCAddress).Msg("adding peer to node pool")
 				c.pool.AddNode(peerRPCAddress)
+				fmt.Printf("\t\tAdded peer %s to pool", peerRPCAddress)
 			}
 		}
 	}
+
+	fmt.Println("")
 
 	if err := c.SaveNode(node); err != nil {
 		log.Info().Err(err).Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Msg("failed to encode node")

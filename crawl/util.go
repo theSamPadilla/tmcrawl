@@ -4,19 +4,30 @@ import (
 	"fmt"
 	"net"
 	"net/url"
+	"strings"
 	"time"
 
 	"github.com/harwoeck/ipstack"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	libclient "github.com/tendermint/tendermint/rpc/lib/client"
+	"github.com/rs/zerolog/log"
+
+	//rpcclient "github.com/tendermint/tendermint/rpc/client"
+	httpclient "github.com/tendermint/tendermint/rpc/client/http"
+	//jsonrpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	//libclient "github.com/tendermint/tendermint/rpc/lib/client"
 )
 
-var clientTimeout = 2 * time.Second
+func newRPCClient(remote string) *httpclient.HTTP {
+	//Add "tcp" to remote
+	var remoteAddr = fmt.Sprintf("tcp://%s", remote)
+	httpClient, err := httpclient.NewWithTimeout(remoteAddr, "/websocket", 2)
+	if err != nil {
+		log.Err(err).Str("Failed to create json RPC client with address", remoteAddr)
+	}
 
-func newRPCClient(remote string) *rpcclient.HTTP {
-	httpClient := libclient.DefaultHTTPClient(remote)
-	httpClient.Timeout = clientTimeout
-	return rpcclient.NewHTTPWithClient(remote, "/websocket", httpClient)
+	// //Add timeout and return rpc client
+	// httpClient.Timeout = clientTimeout
+	// rpcClient := jsonrpcclient.Client().NewWithHTTPClient(remoteAddr, httpClient)
+	return httpClient
 }
 
 func parsePort(nodeAddr string) string {
@@ -29,12 +40,19 @@ func parsePort(nodeAddr string) string {
 }
 
 func parseHostname(nodeAddr string) string {
+	//fmt.Println("Parsing hostname", nodeAddr)
 	u, err := url.Parse(nodeAddr)
 	if err != nil {
+		//fmt.Println("Returning ERROR", err)
 		return ""
 	}
 
-	return u.Hostname()
+	fmt.Println(u.Host)
+	var list = strings.Split(nodeAddr, "@")
+	var host = list[len(list)-1]
+
+	return host
+	//return u.Hostname()
 }
 
 func locationFromIPResp(r *ipstack.Response) Location {
