@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/fissionlabsio/tmcrawl/crawl"
 	"github.com/stretchr/testify/require"
+	"github.com/theSamPadilla/tmcrawl/crawl"
 )
 
 func TestNode_Key(t *testing.T) {

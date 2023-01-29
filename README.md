@@ -1,7 +1,7 @@
 # tmcrawl
 
-[![Build Status](https://travis-ci.org/fissionlabsio/tmcrawl.svg?branch=master)](https://travis-ci.org/fissionlabsio/tmcrawl)
-[![Go Report Card](https://goreportcard.com/badge/github.com/fissionlabsio/tmcrawl)](https://goreportcard.com/report/github.com/fissionlabsio/tmcrawl)
+[![Build Status](https://travis-ci.org/theSamPadilla/tmcrawl.svg?branch=master)](https://travis-ci.org/theSamPadilla/tmcrawl)
+[![Go Report Card](https://goreportcard.com/badge/github.com/theSamPadilla/tmcrawl)](https://goreportcard.com/report/github.com/theSamPadilla/tmcrawl)
 
 > A Tendermint p2p crawling utility and API.
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/fissionlabsio/tmcrawl/cmd"
+	"github.com/theSamPadilla/tmcrawl/cmd"
 )
 
 func main() {

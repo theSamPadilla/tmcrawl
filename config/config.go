@@ -25,6 +25,7 @@ var (
 
 // Config defines all necessary tmcrawl configuration parameters.
 type Config struct {
+	Path       string   `toml:"path"`
 	DataDir    string   `toml:"data_dir"`
 	ListenAddr string   `toml:"listen_addr"`
 	Seeds      []string `toml:"seeds" validate:"required,min=1"`

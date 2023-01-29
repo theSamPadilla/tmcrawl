@@ -6,15 +6,15 @@ import (
 	"os"
 	"time"
 
-	"github.com/fissionlabsio/tmcrawl/config"
-	"github.com/fissionlabsio/tmcrawl/crawl"
-	"github.com/fissionlabsio/tmcrawl/db"
-	"github.com/fissionlabsio/tmcrawl/server"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
+	"github.com/theSamPadilla/tmcrawl/config"
+	"github.com/theSamPadilla/tmcrawl/crawl"
+	"github.com/theSamPadilla/tmcrawl/db"
+	"github.com/theSamPadilla/tmcrawl/server"
 )
 
 const (

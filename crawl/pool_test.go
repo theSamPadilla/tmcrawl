@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/fissionlabsio/tmcrawl/crawl"
 	"github.com/stretchr/testify/require"
+	"github.com/theSamPadilla/tmcrawl/crawl"
 )
 
 func TestNodePool_Seed(t *testing.T) {

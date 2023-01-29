@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/fissionlabsio/tmcrawl/db"
 	"github.com/stretchr/testify/require"
+	"github.com/theSamPadilla/tmcrawl/db"
 )
 
 func TestGetSet(t *testing.T) {

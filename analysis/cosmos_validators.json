@@ -1,0 +1,912 @@
+{
+  "height": "0",
+  "endpoint": "<ip>:1317//validatorsets",
+  "api": "cosmos",
+  "api_type": "tendermint rpc",
+  "result": {
+    "block_height": "13833741",
+    "validators": [
+      {
+        "address": "cosmosvalcons14sk4vptumprktehmuvvf0yynarjy4gv08t64t4",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "0kNlxBMpm+5WtfHIG1xsWatOXTKPLtmSqn3EiEIDZeI="
+        },
+        "proposer_priority": "-2934340",
+        "voting_power": "12392285"
+      },
+      {
+        "address": "cosmosvalcons1yxv746y5egu3l2p0q8pvv99lavgr6ptvdhx306",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "C+VWc34ZF6n/QoIAXo4191OwKxQWpbFnrGKCqcNbe1E="
+        },
+        "proposer_priority": "-61132168",
+        "voting_power": "10539869"
+      },
+      {
+        "address": "cosmosvalcons16t2937fqnm9ceg42k8veupnprwqj4puhwm6yyv",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "hUDXospsiB6oJVvkRVB2IyanCHs5hiaeqoEWzp9be8w="
+        },
+        "proposer_priority": "43626214",
+        "voting_power": "9665624"
+      },
+      {
+        "address": "cosmosvalcons1a4gfu7qf0cfsd2glah5wskm46p4amahrjvtw2p",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "Lbk6LJSg/x/Paa6Wk15P12B7+EE2G35Lem+edKZ6siE="
+        },
+        "proposer_priority": "-60214082",
+        "voting_power": "9428292"
+      },
+      {
+        "address": "cosmosvalcons1668wcrfwsfy0rmryek6ctmdkrm9yx27c7grulf",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "LtiHVLCcE+oFII0vpIl9mfkGDmk9BpPg1eUkvKnO4xw="
+        },
+        "proposer_priority": "37057958",
+        "voting_power": "8926667"
+      },
+      {
+        "address": "cosmosvalcons1nnu2u874qluh5p2z2pvzlljjjgkg6dc9mwtxn3",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "13QaXby84V+Ueu3Y8NpasgALcRXzl29k2A9K/3FRQHM="
+        },
+        "proposer_priority": "-94622373",
+        "voting_power": "8598363"
+      },
+      {
+        "address": "cosmosvalcons1rnknqueazcju3x4knpnhvpksudanva4f08558z",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "dhhD3I5QbtC870Il4IzML5Q2AwVDiSn9/HJ9w09Rgdg="
+        },
+        "proposer_priority": "-41235091",
+        "voting_power": "7292785"
+      },
+      {
+        "address": "cosmosvalcons1kyt86pphmwwlp4fnac4vmeypqufehhfw8zucrv",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "5f4G3k6oAqwpegXoLy02ooGPK0qKX5Xg6Yz9ch+cuqg="
+        },
+        "proposer_priority": "-35824277",
+        "voting_power": "7093032"
+      },
+      {
+        "address": "cosmosvalcons17ktnf2yk5a5fgd4uxs3zgn7cv2hp38zuw8j35e",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "Qajjf1kiAJ0M1UcH1TSUYLP13kgE128Av1XmGQO711c="
+        },
+        "proposer_priority": "58554515",
+        "voting_power": "6635722"
+      },
+      {
+        "address": "cosmosvalcons1dre8q72eph9vcwkpcjyj5xsq3u6g7kt0q0pn3n",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "BOIkjkFruMpfOFC9oNPhiJGfmY2pHF/gwHdLDLnrnS0="
+        },
+        "proposer_priority": "-52343549",
+        "voting_power": "6475810"
+      },
+      {
+        "address": "cosmosvalcons1v7dcj7zewwlff48alzmxlp9f9xfjayw9qznplh",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "Roh99RlsnDKHUFYUcQVHk2S84NeZfZdpc+CBb6NREhM="
+        },
+        "proposer_priority": "103234675",
+        "voting_power": "5684245"
+      },
+      {
+        "address": "cosmosvalcons1m8u2gxmc92n2v6kus8u48y3u0h88kcqp69cr3a",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "n9bW9hmvwSwm/AnJtDwZNGA+2RSoQsfoMFsc2Rrb0vY="
+        },
+        "proposer_priority": "47599095",
+        "voting_power": "4530907"
+      },
+      {
+        "address": "cosmosvalcons1mf42422ee8hc3gltx7clzp7tyen7hw4t3vnmw0",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "KbhRasSMxRtStejqK/Ayzexm/DtavlfbNjWGznPXMlE="
+        },
+        "proposer_priority": "28456625",
+        "voting_power": "3759842"
+      },
+      {
+        "address": "cosmosvalcons1px0zkz2cxvc6lh34uhafveea9jnaagckmrlsye",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "e3BehnEIlGUAnJYn9V8gBXuMh4tXO8xxlxyXD1APGyk="
+        },
+        "proposer_priority": "-90935365",
+        "voting_power": "3643751"
+      },
+      {
+        "address": "cosmosvalcons128dj2e3qfm3xvsn74znvkuvcxk43wzlfngfrz8",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "ovdfH/edW89+uiB0lHC5OnCbQfKtkn8G1RHZiOP4sYQ="
+        },
+        "proposer_priority": "-27150299",
+        "voting_power": "3565221"
+      },
+      {
+        "address": "cosmosvalcons1s0686a68krmr8f46ph6fklw0v8us4gdsm7nhz3",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "W459Kbdx+LJQ7dLVASW6sAfdqWqNRSXnvc53r9aOx/o="
+        },
+        "proposer_priority": "21356205",
+        "voting_power": "3539360"
+      },
+      {
+        "address": "cosmosvalcons1xxfqlx7r5wdkdpmvcltdtevfuype80cwmrrtae",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "lh/p8UTp1kF8+4noOeInUG3PuWpFzk6Mnopj0updt4I="
+        },
+        "proposer_priority": "-75988852",
+        "voting_power": "3516038"
+      },
+      {
+        "address": "cosmosvalcons12ys9vkd8zl0lh9hq2nut6yggwv8p0t4882vg4k",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "XJXB9ZVBXZNG9uUOfvHmrDmB4L8NiV0INOHdXbG0PWA="
+        },
+        "proposer_priority": "61538563",
+        "voting_power": "3267889"
+      },
+      {
+        "address": "cosmosvalcons1qxdeeg55f57vxmruwv5rau743etv3fw530uf8x",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "pTcg/QVBC+LzpR0BuynDpMkNh4tajyeKCOtmWMfkvFU="
+        },
+        "proposer_priority": "95534836",
+        "voting_power": "3152190"
+      },
+      {
+        "address": "cosmosvalcons1tfvaep6xl4e8lhw4e06uhwgvdaskenumhk03w6",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "CM0tuwBVM2UPzc1eKOvvraQdSnIWC3riTabKQc2pvYc="
+        },
+        "proposer_priority": "33765376",
+        "voting_power": "3078314"
+      },
+      {
+        "address": "cosmosvalcons1y4z96r4n205s2z43rmrpjl2aeds3npkm9akset",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "GUqbUS+7PeplNfxVcnDIyrXTLJPNdJQ4MQ6kBg5eYpw="
+        },
+        "proposer_priority": "19606110",
+        "voting_power": "2715200"
+      },
+      {
+        "address": "cosmosvalcons1zu87l4kh7jnf4tns5fzptlzw9jfgmch9q25f5v",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "N7D/fL/Hgpz1UG5J/wLgo5GXvQM11/lJyCg1BjAqUjY="
+        },
+        "proposer_priority": "-5410005",
+        "voting_power": "2677979"
+      },
+      {
+        "address": "cosmosvalcons1f6cjsfn47ujttypx7gtncglsmjvndugc2zelqx",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "5qKdBzdr8XHw2BWR/8yEceFRWEjGpzsqBo6q0OVkf9g="
+        },
+        "proposer_priority": "-58583054",
+        "voting_power": "2647983"
+      },
+      {
+        "address": "cosmosvalcons1kq9xxgmn0uepav9c6kwxl4yh599kpyu28e7ee6",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "cOQZvh/h9ZioSeUMZB/1Vy1Xo5x2sjrVjlE/qHnYifM="
+        },
+        "proposer_priority": "-84535687",
+        "voting_power": "2368214"
+      },
+      {
+        "address": "cosmosvalcons1aqalcsmd9n5dej0vqkym9edhxh3hlwzujn0tn7",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "/BgHVZ3E2KAtxt7OsEVfHht+8jAQDZYMYiH4+THC0UI="
+        },
+        "proposer_priority": "91103927",
+        "voting_power": "2345526"
+      },
+      {
+        "address": "cosmosvalcons1pdpwglc4fcjdzqvyhvfwxg684trpc6uqck5sxk",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "U4ssXnFQCpZV/hZh+r3L71ZloasEcXR//LdIVR9zQb4="
+        },
+        "proposer_priority": "78010078",
+        "voting_power": "2327608"
+      },
+      {
+        "address": "cosmosvalcons1d4cplfv4xf5gmutt472jzym73s2vhvckjadcn2",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "Aum3ZbNR/pFXYLA5yeL4Zeyr6v1BFrjy6sABnvyWnjw="
+        },
+        "proposer_priority": "106683633",
+        "voting_power": "2301958"
+      },
+      {
+        "address": "cosmosvalcons1nstujnmnzwa56msxg2rmam096wygazz4y6as4g",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "Mvh+7UDaXgmj4Fst0ZUdx++MJmoq4B9M6mdgNc8H2pM="
+        },
+        "proposer_priority": "-22833740",
+        "voting_power": "2158437"
+      },
+      {
+        "address": "cosmosvalcons1sxt9l69pt75q0ryjqtejun86wtu9723zyaezq8",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "PflSgb+lC1GI22wc6N/54cNzD7KSYQyCWR5LuQxjYVY="
+        },
+        "proposer_priority": "-46363926",
+        "voting_power": "1975859"
+      },
+      {
+        "address": "cosmosvalcons1jhsxp5rhzvrsl6vz9ak9p0tkhn9lnut6ehz9ej",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "ahgQzIOmCh5+A9iGXJRh8AKNlk4NCcOiPebzZEuIN3A="
+        },
+        "proposer_priority": "45016343",
+        "voting_power": "1841226"
+      },
+      {
+        "address": "cosmosvalcons1ejrl266cvgvprc4453ln33skdc54ecmwjdyr4d",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "BewhITg/tAUf0yKYX4HbkHM+CsL8JwWPaPWG4Y0vCkE="
+        },
+        "proposer_priority": "-6782678",
+        "voting_power": "1747827"
+      },
+      {
+        "address": "cosmosvalcons1vu2xpycvehymqmzaq40y64gwhrd0y2g77ec8vl",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "2k346W3w8NFAQh21j1hBp+Mvur+ZhHFuEQk8DEOlN+c="
+        },
+        "proposer_priority": "-40170932",
+        "voting_power": "1596679"
+      },
+      {
+        "address": "cosmosvalcons1whdtx9h5egfk0afj4dc6szml5edtdype42hm00",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "khWkK81bJAgsgLL2GsoTKevosSJ+82VklvpC8gOh6yk="
+        },
+        "proposer_priority": "-82588887",
+        "voting_power": "1592587"
+      },
+      {
+        "address": "cosmosvalcons1eszcs2tcl30a66nhy958u9xq9xdwqp9c65dnm6",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "fUj2rJ8mWqSdo8FX47dhWni++/oxOSduCBgymD4GCiU="
+        },
+        "proposer_priority": "-8800988",
+        "voting_power": "1542524"
+      },
+      {
+        "address": "cosmosvalcons1aqq8grrgeqdnqdzu8t3t5cu054hlvlh062nhqx",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "vvSJSs7OAESNGSF1CnA+aOcAz/VcRtH4qB2/ZBUp0Lo="
+        },
+        "proposer_priority": "30975474",
+        "voting_power": "1361820"
+      },
+      {
+        "address": "cosmosvalcons164q2kq3q3psj436t9p7swmdlh39rw73wpy6qx6",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "T2/RQlkfKOBz6eCt/drq8pCIQUPmk2e8QFJ39IsA96M="
+        },
+        "proposer_priority": "-57629055",
+        "voting_power": "1346356"
+      },
+      {
+        "address": "cosmosvalcons10vazaljm8lxlsx0u75nqwv2valj82jak592py8",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "11pGwt6bot1EC5xeug8mulFNBBWsHV+X7XrxLUmTNF8="
+        },
+        "proposer_priority": "80081809",
+        "voting_power": "1330132"
+      },
+      {
+        "address": "cosmosvalcons1tyh30wuv7d42xkr8vk0ckr57wms3hna6valwtm",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "IeTUELQs74lZj6+ktOM4UN+UVbAbiweas9uC1vQ/Onk="
+        },
+        "proposer_priority": "45746609",
+        "voting_power": "1248571"
+      },
+      {
+        "address": "cosmosvalcons18wz9exh3660flwmzpd56kgnt9zavj7v9uum0aw",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "8KD85R8EMmFataztLyUO40jp1o21+A6pbsoAL/m1SBI="
+        },
+        "proposer_priority": "72610012",
+        "voting_power": "1248347"
+      },
+      {
+        "address": "cosmosvalcons1g63l3wpe8w4p20zqu4ezat5zagx53vedf849wa",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "7IAdsrLz+vP28D/JJZwWUdKe+8KWUN8TskXxch+8p6g="
+        },
+        "proposer_priority": "89948982",
+        "voting_power": "1180742"
+      },
+      {
+        "address": "cosmosvalcons1l4w4fcxeu3mgl6jvphlaez06j6mx2lej9yhszt",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "6Sn2gbsgiFAkZY5mbe/YdBtO9SLV+AZgRFg7cLqrd04="
+        },
+        "proposer_priority": "16893578",
+        "voting_power": "1126272"
+      },
+      {
+        "address": "cosmosvalcons1sjea3y3t5tey5w280mq5j4uer0s6uam9nthe0r",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "LdzSojUSWLkp1vfoEHABOmiqV/7baG77vqnaTJpwvJM="
+        },
+        "proposer_priority": "100166421",
+        "voting_power": "1116443"
+      },
+      {
+        "address": "cosmosvalcons156f4mpmmjamvgkuka6h9y62e5wu6t2c6ld3frz",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "XnuJkcL3Bz7iunLHgka7ISR1SVR8yePrREpIFqOs7mk="
+        },
+        "proposer_priority": "-54779754",
+        "voting_power": "1106347"
+      },
+      {
+        "address": "cosmosvalcons1dj6867rt9u6scyaxpwmh6wv2eqhfqzv9favv9l",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "3yAYBP6Jfv+iagCf0fRotrGEkUE6tuT+A4AE4LL8vTk="
+        },
+        "proposer_priority": "36282446",
+        "voting_power": "1077576"
+      },
+      {
+        "address": "cosmosvalcons1upc05nc9pwhhagnkr3f2dft327qxsxfeyvajsu",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "t9l8HjwxL8WVwanxbZTOv7YNeUIp5EnMwg2xaVgi8I0="
+        },
+        "proposer_priority": "39728986",
+        "voting_power": "1026312"
+      },
+      {
+        "address": "cosmosvalcons16w7zdvdfmmyd26c28w8v6gc3pmzv63d823y70l",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "M0/pO5jEivlHsnabLvdXK9fimRbNBukObEllPKWUErc="
+        },
+        "proposer_priority": "14122646",
+        "voting_power": "1006104"
+      },
+      {
+        "address": "cosmosvalcons1s347fuu7xy3d9gknle29fcjkzpe7j4fc2dk40r",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "W9ITG4nnL9YkFziREMpzc1jBOLfmdiNmhbBkumYmCO8="
+        },
+        "proposer_priority": "-36881107",
+        "voting_power": "972669"
+      },
+      {
+        "address": "cosmosvalcons1j7936y5vdvh6c55v07tt05hdmhuz5xu77qyga2",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "IP8ovHc8UqvtfE7NxHLk4Phf4RLsikwOgobyD+e6gpA="
+        },
+        "proposer_priority": "-73726881",
+        "voting_power": "926883"
+      },
+      {
+        "address": "cosmosvalcons1d94te9gcdlt95pc9ps52kqxfxk9rz5psfatv7y",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "GghJGDl/JZSZ07B2ARdvvJ8SPKtoi/dh8PbYSui359I="
+        },
+        "proposer_priority": "1546633",
+        "voting_power": "775728"
+      },
+      {
+        "address": "cosmosvalcons1ld8myknpkjf6t0uw8n2tt684kszd4r3rwy98d2",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "68r8DAukUPMCZMD36AjOsf6qRTFj+V25uaE1EAFRAAI="
+        },
+        "proposer_priority": "55735308",
+        "voting_power": "749304"
+      },
+      {
+        "address": "cosmosvalcons16999gt582mp6jskelky88hpwnfme3gtlaaat0s",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "Zvd+ILfG9q1jPnZfOOYdZOuNLThLdCRPkvRV+HrXkCs="
+        },
+        "proposer_priority": "44351785",
+        "voting_power": "738701"
+      },
+      {
+        "address": "cosmosvalcons1s4fsuunlj5a2l83vg436x3yncth454wv333xse",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "0PIJIxF7zNKbME1AxbweH7mE4dCYz08BuuiUSdGzncw="
+        },
+        "proposer_priority": "50976941",
+        "voting_power": "715857"
+      },
+      {
+        "address": "cosmosvalcons13c8wx7mmrgpcm529uv83a7ta7dseaapfj2eket",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "SpROiLOBv3fWINvXvgXHDMLMjVM/9x24WpC3AH/aTbY="
+        },
+        "proposer_priority": "-46023685",
+        "voting_power": "703278"
+      },
+      {
+        "address": "cosmosvalcons1h8kwr4a5mkqws6px86364unjh8rlz2fd7gr73q",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "0wQ1SJucRxDeAVwCQzFinkm3K0UkOlnkf5Ll+BluDQA="
+        },
+        "proposer_priority": "-35737628",
+        "voting_power": "701764"
+      },
+      {
+        "address": "cosmosvalcons1hdmtccezcafn5lxd8tcupzw8kwt3lvqjqdtkfy",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "YAQR/TLMuDMgOTS/KcMdU80y2JAze7DX/GELq9uqdEM="
+        },
+        "proposer_priority": "-88416367",
+        "voting_power": "671444"
+      },
+      {
+        "address": "cosmosvalcons1kv2cr60l2ugy25cnwr3dfz2694h7mm8muyensh",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "t0Yoals7uv2cJJugTF8e1f/2pA/vasY37LbBG79n2xY="
+        },
+        "proposer_priority": "33616188",
+        "voting_power": "639983"
+      },
+      {
+        "address": "cosmosvalcons1vrj9ryfsxsgdx2xn6r399a0tc3zkyez2ps6e4t",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "40mPHu2n7+r4Q6FGyXY9DjdBU236yAKvDZTOnev83Zs="
+        },
+        "proposer_priority": "77288359",
+        "voting_power": "618501"
+      },
+      {
+        "address": "cosmosvalcons1htpn7dq0xjth28cjfp50qj0v96ynptp0s0hclt",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "9KA7fKlALPdKPb7SM4UGlpnbSU4U9U1A4c3u8V2KdTs="
+        },
+        "proposer_priority": "-42303581",
+        "voting_power": "599120"
+      },
+      {
+        "address": "cosmosvalcons1nhzqzgyehe6rrzg8fwz7fxy34canlm5m6dm4wg",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "6Mf3hC1oiYE5mAOTGTmlA61zJJr+GHyGu4WUWO/mREo="
+        },
+        "proposer_priority": "104018788",
+        "voting_power": "598032"
+      },
+      {
+        "address": "cosmosvalcons1nhuwxwxgt6rehjztp24z3gytgvdatd2g7kndfm",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "TjzJhR+Eeze5QWaeHlWDi8KmmB/d9/G1j9xOSK0aOVk="
+        },
+        "proposer_priority": "58535886",
+        "voting_power": "590716"
+      },
+      {
+        "address": "cosmosvalcons1l9zfdya7fq55anllgl66lv7rrswl4vcnmz5h74",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "H1Qb15Q5zvLWdeavlwkFgtDhXR8njaAz0aO5EfgP5kk="
+        },
+        "proposer_priority": "-97454085",
+        "voting_power": "585762"
+      },
+      {
+        "address": "cosmosvalcons10v7sra65mluywnksudvgzt75xlsf8zwuzsq8r3",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "V4ooPEhtI8lNENMVfkFfyUdldUOGtSqRjNZcxhpqKQA="
+        },
+        "proposer_priority": "-90787803",
+        "voting_power": "584276"
+      },
+      {
+        "address": "cosmosvalcons12acnhd6zr3l7kwqmsclusl0dt6pf42tpw50hqz",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "OQ9dO3Q6d75hZg+xAG+ijQtTTJbGezf8PlKmtOuUJjo="
+        },
+        "proposer_priority": "-60157602",
+        "voting_power": "577438"
+      },
+      {
+        "address": "cosmosvalcons1a0kkjnnvuy3ylv0g5twcae368ptgk83tyalw6t",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "z/Dg9WU/rlIB+LaQVMMHW/a7rvalfIcyz3VdOwfvguc="
+        },
+        "proposer_priority": "99909712",
+        "voting_power": "567267"
+      },
+      {
+        "address": "cosmosvalcons1j8yz8f6ymeg0j8qh534kynkl3ac4pf7a4xhrhr",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "/VS/bgueXBoNDsrzxxaX64RIL//2wHb9VZ0Jd67+AqQ="
+        },
+        "proposer_priority": "-74091001",
+        "voting_power": "553375"
+      },
+      {
+        "address": "cosmosvalcons1eemgqv7hylr29zvq4mmnwtgjgvnusy9g4nlklf",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "t4RElYQBKVnkJxtrcLe24/CR1Ph88Q++rQLVaR5jNk0="
+        },
+        "proposer_priority": "-67485000",
+        "voting_power": "551115"
+      },
+      {
+        "address": "cosmosvalcons1sqghwtkhmheve8xh5jxgcz4zfphf7n5huz7kah",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "ils2v7pMD3f3JLodaXHIlsv46BRe+bOir3FNivhIzWo="
+        },
+        "proposer_priority": "-80699472",
+        "voting_power": "544655"
+      },
+      {
+        "address": "cosmosvalcons1dr6mh6kw7y2vwg82njvtlghlmcqu2n730pfk8a",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "XiGz/D6eg3KdjaFB0uYIJwkOTW5xZcFRxJmHcQYB3zg="
+        },
+        "proposer_priority": "20264216",
+        "voting_power": "508803"
+      },
+      {
+        "address": "cosmosvalcons1wdx5ghv9gkfua7uw7rzy86fr3ur7waa2dtyegj",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "s11j8L7dxnSWJR8piA8ncX8NQhNT7zDfBiphviLxlWk="
+        },
+        "proposer_priority": "-54699490",
+        "voting_power": "485849"
+      },
+      {
+        "address": "cosmosvalcons19s49axu7lyp3vnazh5l3gpt3mhcz5qxvucqyks",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "g2acQR2m9vJoeZMqnol7l+JY+dGo4EiizyB1Owwn3CQ="
+        },
+        "proposer_priority": "-94203601",
+        "voting_power": "482339"
+      },
+      {
+        "address": "cosmosvalcons1p2a6xmz5m5x2dfus4muk5qw58yhrvdzltw4q4u",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "uEUR1gpesU4bnSWL2TOXOf3org2mCYhQHMYkiCJyMD4="
+        },
+        "proposer_priority": "-22144747",
+        "voting_power": "481435"
+      },
+      {
+        "address": "cosmosvalcons1knssshcun6asa2v5g5ktrwqjfw5fhmg686lfzr",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "+LbXwDMu37jkBRBLFtXazRfEd2ytSAkIncZ/Ng+6jVI="
+        },
+        "proposer_priority": "19418810",
+        "voting_power": "469006"
+      },
+      {
+        "address": "cosmosvalcons1k2lk3t2va4h73ac64jkszqp5xm47qu5ll0s5aq",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "vGSKfbQyKApvBhinpOOA0XQAdjxceihYNwtGskfZGyQ="
+        },
+        "proposer_priority": "-7051625",
+        "voting_power": "464974"
+      },
+      {
+        "address": "cosmosvalcons1fxalkxap5ag99cezd68purh7kvu33w9jhtryqq",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "fjKz5EcrpVII/MzwTF/d+3FHEIMJtSZfU9WMaH+b/Ok="
+        },
+        "proposer_priority": "19619079",
+        "voting_power": "464333"
+      },
+      {
+        "address": "cosmosvalcons1evelsgtuq72jajsc757pl6hez053gvfhu2mjty",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "2xWuWOFp6r8AtEEmB96w36ZcKLgumqAAFlZcxe2bJPs="
+        },
+        "proposer_priority": "-18438741",
+        "voting_power": "436403"
+      },
+      {
+        "address": "cosmosvalcons1aee6r9636kx9aszycy0rldawdpdpp5kpdm0yux",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "lObsqlAjmPsnBfBE+orb8vBbKrH2G5VskSUlAq/YcXc="
+        },
+        "proposer_priority": "-81425842",
+        "voting_power": "427408"
+      },
+      {
+        "address": "cosmosvalcons1kq24y5kh8dlwkaxj4rxgzsuhue5hp2petveuva",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "w3rKE+tQoLK8G+XPmjn+NszCk07iQ0sWaBbN5hQZcBY="
+        },
+        "proposer_priority": "12044333",
+        "voting_power": "413633"
+      },
+      {
+        "address": "cosmosvalcons1kgmt9g366ut2nkxc26svhfmz7v34zhzl73rgp2",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "yUj/VORRHG1dF/T8mYR558yANp265MVhRwcpTl8IWvA="
+        },
+        "proposer_priority": "89973316",
+        "voting_power": "376964"
+      },
+      {
+        "address": "cosmosvalcons1xly2n8wp2gudg57ql0h8c2ktah7j0s0yjr7nsn",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "Z8Bs/NBxshUqUG4gJI0/O6qMn/H/ZoD16Rl0tejctY0="
+        },
+        "proposer_priority": "15715782",
+        "voting_power": "376512"
+      },
+      {
+        "address": "cosmosvalcons1d028q5ppxv4fpwfrjlvdwt9rj5xtsk8t7qzwxh",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "A6LZ/bCDFj6t5yB7tOKso9Vr2uEcCbjq8H1rsY12NJo="
+        },
+        "proposer_priority": "-76890009",
+        "voting_power": "363569"
+      },
+      {
+        "address": "cosmosvalcons1m7fg8k39k2tyym5hgwrpf5wx9hqsr8vywuyrtm",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "wYgizm1MoU4+QMPV0lPlESo/Z5YzDbfna562kOUNU4s="
+        },
+        "proposer_priority": "11206199",
+        "voting_power": "360083"
+      },
+      {
+        "address": "cosmosvalcons19f07eunv876rgf4vdv7mtzj6h3vqpu4qtedw05",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "idewuO7ku3PO7LWarS4WNUPvvAZVgOTYMbyPqtcltlg="
+        },
+        "proposer_priority": "-17313720",
+        "voting_power": "357678"
+      },
+      {
+        "address": "cosmosvalcons19qj454eqner3yn5p5w808vxwr9ylwjhwjpyq30",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "xqk6/omhFwP3NNu/Bsxgh4ED4RjDQjD0ig/FMQXJZ7k="
+        },
+        "proposer_priority": "99456849",
+        "voting_power": "354523"
+      },
+      {
+        "address": "cosmosvalcons1knxq8u4v5gky8hs76wz6zp96s6m5vfujw95wla",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "sgYnzrP98JYHQrEiJxYHMLRHyUQcB05HcTtO/Xjbkfc="
+        },
+        "proposer_priority": "67899572",
+        "voting_power": "353598"
+      },
+      {
+        "address": "cosmosvalcons1rwefvuqddl8jxx92mgksnrjdgprekmr79r2t07",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "SRCGDt6z8TFeUjGZt88gBSi4pSRyzbEuba5HB15A0jQ="
+        },
+        "proposer_priority": "-4151888",
+        "voting_power": "352583"
+      },
+      {
+        "address": "cosmosvalcons1ntg25x9f9gdyxazzdmvmsxfdr4kr6f53nhwys4",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "7eHS9nARXr4gyuuDVxbQC2CDVkEa22ye3uHhcbeLurc="
+        },
+        "proposer_priority": "-49420716",
+        "voting_power": "345564"
+      },
+      {
+        "address": "cosmosvalcons1yy3rgawwsmeu0n27npd23r7zfg5uj7qnk6xvj2",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "wUITCsvuysiVpQP9fUynw3fsIRX+qMBQjFoHwwaXeS8="
+        },
+        "proposer_priority": "88200461",
+        "voting_power": "334685"
+      },
+      {
+        "address": "cosmosvalcons15nca2560875stfx6vphg5yyrf9m9z8lheucgef",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "A1rnWvZI4N1rlS2RG+gR0utmUp5n4CB3La4iQsdTwAs="
+        },
+        "proposer_priority": "-66592953",
+        "voting_power": "330302"
+      },
+      {
+        "address": "cosmosvalcons16hkujdp3fjymgk2jvg8fexftrhysrpzzzmrweg",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "5RNZbutSqesWjKl0UJ7VsXBWyweVxxcWgy9PzD6qVes="
+        },
+        "proposer_priority": "-17260687",
+        "voting_power": "326899"
+      },
+      {
+        "address": "cosmosvalcons1c5e86exd7jsyhcfqdejltdsagjfrvv8xv22368",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "FxSjsSvWPbw5NQczsh0+QRWqYTVauFJd/MateonbfO8="
+        },
+        "proposer_priority": "-2917502",
+        "voting_power": "318469"
+      },
+      {
+        "address": "cosmosvalcons1kpm95tm0esga3tzxya06cpkaxh65y97pmqgmng",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "inTpwtq2gc0g86M+Sovdk7wCxe68QG0Kxr2XO9S/q+0="
+        },
+        "proposer_priority": "86698234",
+        "voting_power": "310712"
+      },
+      {
+        "address": "cosmosvalcons19yr8ml3n22jqfqwm05g7u393pgg0cs5smqryuy",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "bvL7u2t1j5WoBcIkCUBt/5Tkk8aeeZJ7sb2kskfEI5U="
+        },
+        "proposer_priority": "-89657517",
+        "voting_power": "301515"
+      },
+      {
+        "address": "cosmosvalcons1e3wwysvd4pw834lcnlk24vydmn33fsxvwnffjp",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "eOd8T0i/EIn3fw0dSL0/FOOS5vPLSEFp4Ncj43wn7uQ="
+        },
+        "proposer_priority": "-67142320",
+        "voting_power": "298216"
+      },
+      {
+        "address": "cosmosvalcons18xt8rsh7fvn3fmrwsl2wu32w790n8232mlz4p6",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "OYNqTv4/9oQ+DwAaS9TLw7WjZ2s/ZygPVxs/fvAKoq0="
+        },
+        "proposer_priority": "85927063",
+        "voting_power": "294178"
+      },
+      {
+        "address": "cosmosvalcons1d65x8dzt5d5lww0x2k2hwrdtjtyf4ysjdyv245",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "1JnB586AElesgc95XXB45DM7jAhZqKpqLxbSNOFd2cU="
+        },
+        "proposer_priority": "74703125",
+        "voting_power": "278278"
+      },
+      {
+        "address": "cosmosvalcons1cg6kvg45j4e9jcd4kgq68qka2lxnxp0vddkz6t",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "pZBzfgX8aJXz9tqGvz75NnJB0wAFsMrfxY6FTnYMZ0Q="
+        },
+        "proposer_priority": "72513287",
+        "voting_power": "244346"
+      },
+      {
+        "address": "cosmosvalcons1hkcyvfv7klahfg5qzh33uexwa8cgqgvekug2dy",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "WAeQesC3BNtVnZwJKie5DAOjD3Kljg82b5c7j/TB+l0="
+        },
+        "proposer_priority": "-50247643",
+        "voting_power": "232461"
+      },
+      {
+        "address": "cosmosvalcons1uv2n8wp2cea2z7ytwz7haxzma78py54p5akk8j",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "CTqPJAIdMz8F360TcADAii9/tEeI4CvTK4JfBD6DwXI="
+        },
+        "proposer_priority": "94699368",
+        "voting_power": "231885"
+      },
+      {
+        "address": "cosmosvalcons1gnc9st7tywcygp6yx6gxlqsxeaj4ztpk7255q3",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "1HzhBPQhjOFbz3/gRjfHr8+82vQuvK6Mi0K7+bOraLA="
+        },
+        "proposer_priority": "41848492",
+        "voting_power": "230582"
+      },
+      {
+        "address": "cosmosvalcons1lrjsx2uc6hfjgshrykmfwz6rfa6juyf7gszn2c",
+        "pub_key": {
+          "type": "tendermint/PubKeyEd25519",
+          "value": "XN2+6Dh/5bCBWyk2ytv0ecSX+Hi9jdNxAYG70xHuqqw="
+        },
+        "proposer_priority": "-31825276",
+        "voting_power": "230278"
+      }
+    ],
+    "total": "175"
+  }
+}

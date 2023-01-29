@@ -1,6 +1,9 @@
 package crawl
 
 import (
+	bytes "github.com/tendermint/tendermint/libs/bytes"
+	p2p "github.com/tendermint/tendermint/p2p"
+	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 	"github.com/vmihailenco/msgpack/v4"
 )
 
@@ -14,16 +17,26 @@ type (
 	// Node represents a full-node in a Tendermint-based network that contains
 	// relevant p2p data.
 	Node struct {
-		Address  string   `json:"address" yaml:"address"`
-		RPCPort  string   `json:"rpc_port" yaml:"rpc_port"`
-		P2PPort  string   `json:"p2p_port" yaml:"p2p_port"`
-		Moniker  string   `json:"moniker" yaml:"moniker"`
-		ID       string   `json:"id" yaml:"id"`
-		Network  string   `json:"network" yaml:"network"`
-		Version  string   `json:"version" yaml:"version"`
-		TxIndex  string   `json:"tx_index" yaml:"tx_index"`
-		LastSync string   `json:"last_sync" yaml:"last_sync"`
-		Location Location `json:"location" yaml:"location"`
+		//Defined at Init
+		IP       string `json:"ip" yaml:"ip"`
+		RPCPort  string `json:"rpc_port" yaml:"rpc_port"`
+		P2PPort  string `json:"p2p_port" yaml:"p2p_port"`
+		LastSync string `json:"last_sync" yaml:"last_sync"`
+
+		//Defined from Status
+		Moniker         string              `json:"moniker" yaml:"moniker"`
+		ID              p2p.ID              `json:"id" yaml:"id"`
+		Network         string              `json:"network" yaml:"network"`
+		ProtocolVersion p2p.ProtocolVersion `json:"version" yaml:"version"`
+
+		//Types
+		Other    p2p.DefaultNodeInfoOther `json:"other_info" yaml:"other_info"`
+		SyncInfo coretypes.SyncInfo       `json:"sync_info" yaml:"sync_info"`
+		Location Location                 `json:"location" yaml:"location"`
+
+		//Defined from Validator Info
+		ValidatorAddress     bytes.HexBytes `json:"validator_address" yaml:"validator_address"`
+		ValidatorVotingPower int64          `json:"validator_voting_power" yaml:"validator_voting_power"`
 	}
 
 	// Location defines geolocation information of a Tendermint node.
@@ -38,7 +51,7 @@ type (
 
 // Key returns the addressable persistence key of a Node.
 func (n Node) Key() []byte {
-	return NodeKey(n.Address)
+	return NodeKey(n.IP)
 }
 
 // Marshal returns the MessagePack encoding of a Node.

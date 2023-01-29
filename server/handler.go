@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/fissionlabsio/tmcrawl/crawl"
-	"github.com/fissionlabsio/tmcrawl/db"
-	_ "github.com/fissionlabsio/tmcrawl/server/docs"
 	"github.com/gorilla/mux"
 	httpswagger "github.com/swaggo/http-swagger"
+	"github.com/theSamPadilla/tmcrawl/crawl"
+	"github.com/theSamPadilla/tmcrawl/db"
+	_ "github.com/theSamPadilla/tmcrawl/server/docs"
 )
 
 const (
@@ -76,6 +76,7 @@ func getNodesHandler(db db.DB) http.HandlerFunc {
 		db.IteratePrefix(crawl.NodeKeyPrefix, func(_, v []byte) bool {
 			node := new(crawl.Node)
 			err = node.Unmarshal(v)
+
 			if err != nil {
 				return true
 			}

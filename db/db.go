@@ -1,6 +1,7 @@
 package db
 
 import (
+	"fmt"
 	"path/filepath"
 
 	badger "github.com/dgraph-io/badger/v2"
@@ -97,6 +98,7 @@ func (bdb *BadgerDB) IteratePrefix(prefix []byte, cb func(k, v []byte) bool) {
 
 		for it.Seek(prefix); it.ValidForPrefix(prefix); it.Next() {
 			item := it.Item()
+			fmt.Println("\nItem is", item)
 			k := item.Key()
 			v, _ := item.ValueCopy(nil)
 

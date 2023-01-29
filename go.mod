@@ -1,4 +1,4 @@
-module github.com/fissionlabsio/tmcrawl
+module github.com/theSamPadilla/tmcrawl
 
 go 1.13
 
