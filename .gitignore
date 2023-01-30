@@ -15,3 +15,7 @@
 # vendor/
 
 tmcrawl.toml
+analysis/*.json
+analysis/results/
+analysis/info/
+db/tmcrawl.db/

@@ -3,7 +3,6 @@ package crawl
 import (
 	"context"
 	"fmt"
-	"os"
 	"time"
 
 	"github.com/harwoeck/ipstack"
@@ -45,9 +44,9 @@ func NewCrawler(cfg config.Config, db db.DB) *Crawler {
 // When the pool is empty and after crawlInterval seconds since the last complete
 // crawl, a random set of nodes from the DB are added to reseed the pool.
 func (c *Crawler) Crawl() {
-	//!REMOVE AFTER TESTING -> Call the parser of the JSON From util
-	parseValidatorsJSON("analysis/tendermint_validators.json")
-	os.Exit(1)
+	// // //!REMOVE AFTER TESTING -> Call the parser of the JSON From util
+	// parseValidatorsJSON("analysis/tendermint_validators.json")
+	// os.Exit(1)
 
 	// seed the pool with the initial set of seeds before crawling
 	c.pool.Seed(c.seeds)
@@ -81,7 +80,7 @@ func (c *Crawler) Crawl() {
 func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 	ipAddress := parseURL(nodeRPCAddr)
 	nodeP2PAddr := fmt.Sprintf("%s:%s", ipAddress, defaultP2PPort) //p2p is 26656 (defaultP2PPort)
-	nodeTendermintAddr := fmt.Sprintf("%s:%s", ipAddress, "26657")
+	nodeTendermintRPC := fmt.Sprintf("%s:%s", ipAddress, "26657")
 
 	fmt.Printf("\n\n----------Crawling new node at %s----------------\n", nodeP2PAddr)
 
@@ -92,8 +91,8 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 		LastSync: time.Now().UTC().Format(time.RFC3339),
 	}
 
-	log.Debug().Str("p2p_address", nodeP2PAddr).Str("tendermint_address", nodeTendermintAddr).Msg("pinging node...")
-	if ok := PingAddress(nodeTendermintAddr, 2); !ok {
+	log.Debug().Str("p2p_address", nodeP2PAddr).Str("tendermint_address", nodeTendermintRPC).Msg("pinging node...")
+	if ok := PingAddress(nodeTendermintRPC, 2); !ok {
 		log.Info().Msg("Failed to ping Tendermint Address, attempting p2p.")
 
 		if ok2 := PingAddress(nodeP2PAddr, 2); !ok2 {
@@ -115,12 +114,16 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 	}
 
 	// Create context and new rpc client
-	client := newRPCClient(nodeTendermintAddr)
+	client := newRPCClient(nodeTendermintRPC)
 	ctx := context.Background()
 
 	status, err := client.Status(ctx)
 	if err != nil {
 		log.Info().Err(err).Msg("Failed to get node status.")
+		fmt.Printf("\nAttempting to get node info via p2p (%v)...\n\n", nodeP2PAddr)
+		client := newRPCClient(nodeP2PAddr)
+		ctx := context.Background()
+
 	} else {
 		//Strings
 		node.Moniker = status.NodeInfo.Moniker
@@ -163,19 +166,19 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 
 		fmt.Printf("\nGot NET INFO for %d Node Peers", netInfo.NPeers)
 
+		fmt.Println("\n\tParsing peers")
 		for _, p := range netInfo.Peers {
-			fmt.Println("\n\tParsing peers")
-			peerRPCPort := parsePort(p.NodeInfo.Other.RPCAddress)
-			peerRPCAddress := fmt.Sprintf("http://%s:%s", p.RemoteIP, peerRPCPort)
+			// /peerRPCPort := parsePort(p.NodeInfo.Other.RPCAddress)
+			p2pAddress := fmt.Sprintf("http://%s:%s", p.RemoteIP, "26656")
 			peer := Node{
 				IP: p.RemoteIP,
 			}
 
 			// only add peer to the pool if we haven't (re)discovered it
 			if !c.db.Has(peer.Key()) {
-				log.Debug().Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Str("peer_rpc_address", peerRPCAddress).Msg("adding peer to node pool")
-				c.pool.AddNode(peerRPCAddress)
-				fmt.Printf("\t\tAdded peer %s to pool", peerRPCAddress)
+				log.Debug().Str("p2p_address", nodeP2PAddr).Str("rpc_address", nodeRPCAddr).Msg("adding peer to node pool")
+				c.pool.AddNode(p2pAddress)
+				fmt.Printf("\t\tAdded peer %s to pool", p2pAddress)
 			}
 		}
 	}

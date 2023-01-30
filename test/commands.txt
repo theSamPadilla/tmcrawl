@@ -1,4 +1,0 @@
-gaiad query tendermint-validator-set 13670187 --chain-id cosmoshub-4 --node http://195.201.129.95:26657
-
-Node:
-http://88.99.70.38:26657

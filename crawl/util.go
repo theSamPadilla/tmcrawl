@@ -13,9 +13,10 @@ import (
 
 	"github.com/harwoeck/ipstack"
 	"github.com/rs/zerolog/log"
+	"github.com/tendermint/tendermint/crypto"
+	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/tendermint/tendermint/p2p"
 
-	crypto "github.com/tendermint/tendermint/crypto"
-	p2p "github.com/tendermint/tendermint/p2p"
 	httpclient "github.com/tendermint/tendermint/rpc/client/http"
 )
 
@@ -78,7 +79,7 @@ func parseValidatorsJSON(path string) {
 						var validator validatorObject
 						json.Unmarshal(marsh, &validator)
 
-						validator.ID = p2p.ID(hex.EncodeToString([]byte(validator.Address)))
+						validator.ID = p2p.ID(hex.EncodeToString(tmhash.SumTruncated([]byte(validator.Address))))
 
 						fmt.Printf("\nValidator address is = %v\n", validator.Address)
 						fmt.Printf("Validator ID is = %v\n", validator.ID)
