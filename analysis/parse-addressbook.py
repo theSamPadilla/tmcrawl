@@ -4,7 +4,7 @@ with open("addressbook.json") as f:
     addr = json.load(f)
     f.close()
 
-config = toml.load("/home/samuelpadilla/tmcrawl/test/config.toml")
+config = toml.load("../test/config.toml")
 
 final_list = []
 seen = set()
@@ -17,6 +17,6 @@ for i in addr['addrs']:
             seen.add(addy['ip'])
 
 config['seeds'] = final_list
-f = open("/home/samuelpadilla/tmcrawl/test/config.toml", "w+")
+f = open("../test/config.toml", "w+")
 toml.dump(config, f)
 f.close()
