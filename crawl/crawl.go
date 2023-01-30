@@ -120,9 +120,9 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 	status, err := client.Status(ctx)
 	if err != nil {
 		log.Info().Err(err).Msg("Failed to get node status.")
-		fmt.Printf("\nAttempting to get node info via p2p (%v)...\n\n", nodeP2PAddr)
-		client := newRPCClient(nodeP2PAddr)
-		ctx := context.Background()
+		// fmt.Printf("\nAttempting to get node info via p2p (%v)...\n\n", nodeP2PAddr)
+		// client := newRPCClient(nodeP2PAddr)
+		// ctx := context.Background()
 
 	} else {
 		//Strings
@@ -136,6 +136,8 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 		node.SyncInfo = status.SyncInfo
 		node.ValidatorAddress = status.ValidatorInfo.Address
 		node.ValidatorVotingPower = status.ValidatorInfo.VotingPower
+		node.ValidatorPubKeyAddress = status.ValidatorInfo.PubKey.Address()
+		node.ValidatorPubKeyBytes = status.ValidatorInfo.PubKey.Bytes()
 
 		fmt.Printf("\nNodeInfo=%v\n", status.NodeInfo)
 		fmt.Printf("\tNodeInfo.ID=%v is of type %T \n", status.NodeInfo.DefaultNodeID, status.NodeInfo.DefaultNodeID)

@@ -1,6 +1,7 @@
 package crawl
 
 import (
+	"github.com/tendermint/tendermint/crypto"
 	bytes "github.com/tendermint/tendermint/libs/bytes"
 	p2p "github.com/tendermint/tendermint/p2p"
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"
@@ -35,8 +36,10 @@ type (
 		Location Location                 `json:"location" yaml:"location"`
 
 		//Defined from Validator Info
-		ValidatorAddress     bytes.HexBytes `json:"validator_address" yaml:"validator_address"`
-		ValidatorVotingPower int64          `json:"validator_voting_power" yaml:"validator_voting_power"`
+		ValidatorAddress       bytes.HexBytes `json:"validator_address" yaml:"validator_address"`
+		ValidatorPubKeyAddress crypto.Address `json:"validator_pubkey_address" yaml:"validator_pubkey_address"`
+		ValidatorPubKeyBytes   []byte         `json:"validator_pubkey_byte" yaml:"validator_pubkey_byte"`
+		ValidatorVotingPower   int64          `json:"validator_voting_power" yaml:"validator_voting_power"`
 	}
 
 	// Location defines geolocation information of a Tendermint node.
