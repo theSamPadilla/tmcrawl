@@ -16,8 +16,14 @@ Nodes are persisted in a key/value embedded database, by default BadgerDB. Saved
 nodes will also be periodically rechecked every `recheck_interval`. If any node
 cannot be reached, it'll be removed from the known set of nodes.
 
-Note, `tmcrawl` is a Tendermint p2p network crawler, it does not operate as a seed
-node or any other type of node. However, it can be used to gather a set of peers.
+## Things to Note
+
+1. `tmcrawl` is a Tendermint p2p network crawler, it does not operate as a seed
+node or any other type of node.
+2. Tendermint nodes can have peers across multiple networks, so there is no guarantee that all the nodes found by the tool run in the same network. For that, pay attention to the `network` attribute of the [`DefaultNodeInfo`](https://pkg.go.dev/github.com/tendermint/tendermint@v0.34.24/p2p#DefaultNodeInfo) tendermint type.
+3. `tmcrawl` uses the Tendermint RPC port (`26657`) to get [`ResultStatus`](https://pkg.go.dev/github.com/tendermint/tendermint@v0.34.24/rpc/core/types#ResultStatus), from where it extracts network and peer information. Since having the Tendermint RPC port open is optional, **there is no guarantee that `tmcrawl` will crawl all the nodes in a cosmos network.** The number of nodes crawled for a network depends on how many nodes have the RPC port open and which peers they connect to.
+4. Independent development of `tmcrawl` can be found (here)[https://github.com/theSamPadilla/tmcrawl]. Original repo where can be found (here)[https://github.com/fissionlabsio/tmcrawl].
+
 
 ## Install
 
