@@ -7,11 +7,13 @@ import (
 
 	"github.com/harwoeck/ipstack"
 	"github.com/rs/zerolog/log"
+	"github.com/tendermint/tendermint/p2p"
 	"github.com/theSamPadilla/tmcrawl/config"
 	"github.com/theSamPadilla/tmcrawl/db"
 )
 
 const defaultP2PPort = "26656"
+const defaultRPCPort = "26657"
 
 // Crawler implements the Tendermint p2p network crawler.
 type Crawler struct {
@@ -80,7 +82,7 @@ func (c *Crawler) Crawl() {
 func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 	ipAddress := parseURL(nodeRPCAddr)
 	nodeP2PAddr := fmt.Sprintf("%s:%s", ipAddress, defaultP2PPort) //p2p is 26656 (defaultP2PPort)
-	nodeTendermintRPC := fmt.Sprintf("%s:%s", ipAddress, "26657")
+	nodeTendermintRPC := fmt.Sprintf("%s:%s", ipAddress, defaultRPCPort)
 
 	fmt.Printf("\n\n----------Crawling new node at %s----------------\n", nodeP2PAddr)
 
@@ -92,7 +94,8 @@ func (c *Crawler) CrawlNode(nodeRPCAddr string) {
 	}
 
 	log.Debug().Str("p2p_address", nodeP2PAddr).Str("tendermint_address", nodeTendermintRPC).Msg("pinging node...")
-	if ok := PingAddress(nodeTendermintRPC, 2); !ok {
+	fmt.Printf("\nAttempting to establish a handshake on p2p...\n")
+	if ok := p2p.handshake(nodeP2PAddr, 2, new(p2p.DefaultNodeInfo)); !ok {
 		log.Info().Msg("Failed to ping Tendermint Address, attempting p2p.")
 
 		if ok2 := PingAddress(nodeP2PAddr, 2); !ok2 {
